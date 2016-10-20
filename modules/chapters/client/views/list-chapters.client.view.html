@@ -1,0 +1,22 @@
+<section>
+  <ul class="breadcrumb">
+      <li><a href="/"><span class="glyphicon glyphicon-home"></span></a> <span class="divider"></span></li>
+      <li class="active">Chapters</li>
+  </ul>
+  <div class="row">
+      <div ng-repeat="chapter in vm.chapters" class="col-xs-18 col-sm-8 col-md-3">
+        <div class="panel chapters-panel-card" ui-sref="chapters.view({ chapterName: chapter.name })">
+          <div class="panel-heading">
+            <h4 class="card-title" ng-bind="chapter.name"></h4>
+          </div>
+          <div class="panel-body">
+            <p class="chapters-card-description">Lots of info here about the chapter, their mission, and goals.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+          </div>
+          <div class="panel-footer">
+            <span class="small">Executive leader</span>
+            <strong><span class="small" ng-bind="chapter.executiveLeader"></span></strong>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>

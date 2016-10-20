@@ -1,0 +1,13 @@
+.chapters-panel-card {
+  border: #DDDDDD;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+}
+
+.chapters-card-description {
+  height: 150px;
+  min-height: 150px;
+  max-height: 150px;
+  overflow-y: hidden;
+}

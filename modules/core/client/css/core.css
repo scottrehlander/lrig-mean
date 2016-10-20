@@ -1,6 +1,25 @@
+body {
+    background-color: #F3F3F3 !important;
+}
+
+.jumbotron {
+  background-color: #EFEFEF;
+}
+
+.breadcrumb {
+  margin-top: 20px;
+  background-color: #F3F3F3;
+}
+
 .content {
   margin-top: 50px;
 }
+
+.panel-card {
+  margin: 15px;
+  border-color: #FFFFFF;
+}
+
 .undecorated-link:hover {
   text-decoration: none;
 }

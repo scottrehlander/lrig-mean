@@ -1,0 +1,29 @@
+<section>
+  <ul class="breadcrumb">
+      <li><a href="/"><span class="glyphicon glyphicon-home"></span></a> <span class="divider"></span></li>
+      <li class="active">Events</li>
+  </ul>
+  <div class="btn-toolbar" role="toolbar">
+    <div class="btn-group">
+      <button type="button" class="btn btn-default">
+        <span class="glyphicon glyphicon-plus"> </span>
+        Create event
+      </button>
+    </div>
+  </div>
+  <div class="row">
+      <div ng-repeat="event in vm.events" class="col-xs-18 col-sm-8 col-md-3">
+        <div class="panel" ui-sref="events.view({ eventId: event._id })">
+          <div class="panel-heading">
+            <h4 class="card-title" ng-bind="event.name"></h4>
+          </div>
+          <div class="panel-body">
+            <p>Lots of info here about the event and stuff.</p>
+          </div>
+          <div class="panel-footer">
+            <span><a href="#">Comment about this event</a></span>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
