@@ -14,6 +14,8 @@ module.exports = {
       ],
       js: [
         // bower:js
+        'public/lib/jQuery/dist/jquery.js',
+        'public/lib/bootstrap/dist/js/bootstrap.js',
         'public/lib/angular/angular.js',
         'public/lib/angular-animate/angular-animate.js',
         'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
@@ -21,6 +23,7 @@ module.exports = {
         'public/lib/ng-img-crop/compile/unminified/ng-img-crop.js',
         'public/lib/angular-messages/angular-messages.js',
         'public/lib/angular-mocks/angular-mocks.js',
+        'public/lib/angular-modal-service/dst/angular-modal-service.js',
         'public/lib/angular-resource/angular-resource.js',
         'public/lib/angular-ui-router/release/angular-ui-router.js',
         'public/lib/owasp-password-strength-test/owasp-password-strength-test.js',

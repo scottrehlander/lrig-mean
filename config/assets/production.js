@@ -19,6 +19,7 @@ module.exports = {
         'public/lib/angular-file-upload/dist/angular-file-upload.min.js',
         'public/lib/angular-messages/angular-messages.min.js',
         'public/lib/angular-mocks/angular-mocks.js',
+        'public/lib/angular-modal-service/dst/angular-modal-service.min.js',
         'public/lib/angular-resource/angular-resource.min.js',
         'public/lib/angular-ui-router/release/angular-ui-router.min.js',
         'public/lib/owasp-password-strength-test/owasp-password-strength-test.js',
