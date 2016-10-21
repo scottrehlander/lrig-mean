@@ -19,6 +19,10 @@ var EventSchema = new Schema({
     default: '',
     trim: true,
     required: 'Event name cannot be blank'
+  },
+  eventDate: {
+    type: Date,
+    required: 'Event date cannot be blank'
   }
 });
 

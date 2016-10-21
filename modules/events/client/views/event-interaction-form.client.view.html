@@ -1,32 +1,48 @@
-<div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-header">
-      <button type="button" class="close" ng-click="vm.closeModal()" data-dismiss="modal" aria-hidden="true">&times;</button>
-      <h4 class="modal-title">Example</h4>
-    </div>
-    <div class="modal-body">
-      <p>Here's a more complex modal, it contains a form, data is passed to the controller
-       and data is returned from the modal.</p>
-
-  		<form class="form-horizontal" role="form">
-  		  <div class="form-group">
-  		    <label for="name" class="col-sm-2 control-label">Name</label>
-  		    <div class="col-sm-10">
-  		      <input type="text" class="form-control" id="name" placeholder="Your Name" ng-model="name">
-  		    </div>
-  		  </div>
-  		  <div class="form-group">
-  		    <label for="age" class="col-sm-2 control-label">Age</label>
-  		    <div class="col-sm-10">
-  		      <input type="number" class="form-control" id="inputPassword3" placeholder="Age" ng-model="age">
-  		    </div>
-  		  </div>
-  		</form>
-
-    </div>
-    <div class="modal-footer">
-      <button type="button" ng-click="vm.closeModal()" class="btn btn-primary" data-dismiss="modal">OK</button>
-      <button type="button" ng-click="vm.closeModal()" class="btn">Cancel</button>
+<div class="modal show">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" ng-click="vm.closeModal()" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Event</h4>
+      </div>
+      <div class="modal-body">
+        <form name="vm.form.eventForm" novalidate>
+          <div class="form-group" show-errors>
+            <label>Chapter</label>
+            <select name="eventChapter" class="form-control" ng-options="chapter as chapter for chapter in vm.chapters" ng-model="vm.event.chapter">
+            </select>
+          </div>
+          <div class="form-group" show-errors>
+            <label>Event Name</label>
+            <input name="eventName" class="form-control" placeholder="Event name" ng-model="vm.event.eventName" required>
+            <div ng-messages="vm.form.eventForm.eventName.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Event name is required.</p>
+            </div>
+          </div>
+          <div class="form-group" show-errors>
+            <label>Date</label>
+            <input name="eventDate" class="form-control" placeholder="Event date" ng-model="vm.event.eventDate" required>
+            <div ng-messages="vm.form.eventForm.eventDate.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Event date is required.</p>
+            </div>
+          </div>
+          <div class="form-group" show-errors>
+            <label>EventBrite URL</label>
+            <input name="eventBriteUrl" class="form-control" placeholder="Copy and paste the EventBrite URL" ng-model="vm.event.eventBriteUrl">
+            <div ng-messages="vm.form.eventForm.eventDate.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">EventBrite URL is required.</p>
+            </div>
+          </div>
+          <div class="form-group" show-errors>
+            <label>Additional Information (optional)</label>
+            <textarea name="eventDescription" class="form-control"rows="3" ng-model="vm.event.description"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" ng-click="vm.save(vm.form.eventForm.$valid)" class="btn btn-primary">OK</button>
+        <button type="button" ng-click="vm.closeModal()" class="btn">Cancel</button>
+      </div>
     </div>
   </div>
 </div>
