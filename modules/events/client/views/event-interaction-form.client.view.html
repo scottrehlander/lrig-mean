@@ -20,15 +20,41 @@
             </div>
           </div>
           <div class="form-group" show-errors>
-            <label>Date</label>
-            <input name="eventDate" class="form-control" placeholder="Event date" ng-model="vm.event.eventDate" required>
+            <label>Event Date</label>
+            <p class="input-group">
+              <input name="eventDate" type="text" class="form-control" placeholder="Event date" uib-datepicker-popup="{{vm.datePickerOptions.format}}" ng-model="vm.event.eventDate"
+                is-open="vm.datePickerOptions.isOpen" datepicker-options="vm.datePickerOptions.dateOptions"ng-required="true" required />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="vm.datePickerOptions.isOpen = true"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
             <div ng-messages="vm.form.eventForm.eventDate.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Event date is required.</p>
             </div>
           </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group" show-errors>
+                <label>Event Start Time</label>
+                <div name="eventStartTime" uib-timepicker ng-model="vm.event.eventStartTime" show-meridian="true" show-spinners="false" pad-hours="false" ng-required="true" required></div>
+                <div ng-messages="vm.form.eventForm.eventStartTime.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">Event start time is required.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group" show-errors>
+                <label>Event End Time</label>
+                <div name="eventEndTime" uib-timepicker ng-model="vm.event.eventEndTime" show-meridian="true" show-spinners="false" pad-hours="false" ng-required="true" required></div>
+                <div ng-messages="vm.form.eventForm.eventEndTime.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">Event end time is required.</p>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="form-group" show-errors>
             <label>EventBrite URL</label>
-            <input name="eventBriteUrl" class="form-control" placeholder="Copy and paste the EventBrite URL" ng-model="vm.event.eventBriteUrl">
+            <input name="eventBriteUrl" class="form-control" placeholder="Copy and paste the EventBrite URL" ng-model="vm.event.eventBriteUrl" required>
             <div ng-messages="vm.form.eventForm.eventDate.$error" role="alert">
               <p class="help-block error-text" ng-message="required">EventBrite URL is required.</p>
             </div>

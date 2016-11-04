@@ -8,6 +8,16 @@
   function EventInteractionFormController(close, EventsService, ChaptersService, $scope, $filter, Authentication, $window) {
     var vm = this;
 
+    vm.datePickerOptions = {
+      dateOptions: {
+        maxDate: new Date(2020, 5, 22),
+        minDate: new Date(),
+        startingDay: 1
+      },
+      isOpen: false,
+      format: 'MM/dd/yyyy'
+    };
+
     vm.authentication = Authentication;
     vm.error = null;
     vm.form = {};
